@@ -1,15 +1,6 @@
-import webbrowser
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import sys
-import pyperclip
 import requests
-import webbrowser
 import random
 import os,subprocess
-import sys
-import pyperclip
-import requests
 import datetime
 from bs4 import BeautifulSoup
 
