@@ -59,7 +59,7 @@ def get_song_name():
 		if(check_x.text == "Last Week: --"):
 			eex = ex.find('h2')
 			ffx = ex.find('a',attrs={'data-tracklabel':"Artist Name"})
-			song_name = eex.text#[9:]
+			song_name = eex.text
 			artist_name = ffx.text[4:]
 			search_query = song_name + artist_name
 			search_query = change_string(search_query)
