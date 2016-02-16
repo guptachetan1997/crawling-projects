@@ -1,0 +1,250 @@
+The Shawshank Redemption  9.3 
+The Godfather  9.2 
+The Godfather: Part II  9.1 
+The Dark Knight  9.0 
+12 Angry Men  8.9 
+Schindler's List  8.9 
+Pulp Fiction  8.9 
+Il buono, il brutto, il cattivo  8.9 
+The Lord of the Rings: The Return of the King  8.9 
+Fight Club  8.9 
+The Lord of the Rings: The Fellowship of the Ring  8.8 
+Star Wars: Episode V - The Empire Strikes Back  8.8 
+Forrest Gump  8.8 
+Inception  8.8 
+One Flew Over the Cuckoo's Nest  8.7 
+The Lord of the Rings: The Two Towers  8.7 
+Goodfellas  8.7 
+The Matrix  8.7 
+Star Wars  8.7 
+Shichinin no samurai  8.7 
+City of God  8.7 
+Se7en  8.6 
+The Silence of the Lambs  8.6 
+The Usual Suspects  8.6 
+It's a Wonderful Life  8.6 
+La vita è bella  8.6 
+Léon  8.6 
+Once Upon a Time in the West  8.6 
+Interstellar  8.7 
+Saving Private Ryan  8.6 
+Sen to Chihiro no Kamikakushi  8.6 
+American History X  8.6 
+Casablanca  8.6 
+Raiders of the Lost Ark  8.6 
+Psycho  8.6 
+City Lights  8.6 
+Rear Window  8.5 
+The Intouchables  8.6 
+Modern Times  8.6 
+Terminator 2: Judgment Day  8.5 
+The Green Mile  8.5 
+Whiplash  8.5 
+The Pianist  8.5 
+Memento  8.5 
+The Departed  8.5 
+Gladiator  8.5 
+Apocalypse Now  8.5 
+Back to the Future  8.5 
+Sunset Blvd.  8.5 
+Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb  8.5 
+The Prestige  8.5 
+Alien  8.5 
+The Lion King  8.5 
+The Lives of Others  8.5 
+The Great Dictator  8.5 
+Nuovo Cinema Paradiso  8.5 
+Inside Out  8.5 
+The Shining  8.4 
+Django Unchained  8.5 
+Paths of Glory  8.5 
+The Dark Knight Rises  8.5 
+WALL·E  8.4 
+American Beauty  8.4 
+Hotaru no haka  8.5 
+Aliens  8.4 
+Citizen Kane  8.4 
+North by Northwest  8.4 
+Mononoke-hime  8.4 
+Oldeuboi  8.4 
+Vertigo  8.4 
+Das Boot  8.4 
+Star Wars: Episode VI - Return of the Jedi  8.4 
+M  8.4 
+Once Upon a Time in America  8.4 
+Amélie  8.4 
+Witness for the Prosecution  8.4 
+Reservoir Dogs  8.4 
+Braveheart  8.4 
+Toy Story 3  8.4 
+A Clockwork Orange  8.4 
+Taxi Driver  8.4 
+Double Indemnity  8.4 
+Requiem for a Dream  8.4 
+To Kill a Mockingbird  8.4 
+Lawrence of Arabia  8.4 
+Eternal Sunshine of the Spotless Mind  8.4 
+Full Metal Jacket  8.3 
+The Sting  8.3 
+Amadeus  8.3 
+Ladri di biciclette  8.4 
+Singin' in the Rain  8.4 
+2001: A Space Odyssey  8.3 
+Monty Python and the Holy Grail  8.3 
+Snatch.  8.3 
+The Kid  8.4 
+L.A. Confidential  8.3 
+Per qualche dollaro in più  8.3 
+Rashômon  8.3 
+Toy Story  8.3 
+Inglourious Basterds  8.3 
+The Apartment  8.3 
+All About Eve  8.4 
+The Treasure of the Sierra Madre  8.3 
+Jodaeiye Nader az Simin  8.4 
+Indiana Jones and the Last Crusade  8.3 
+Metropolis  8.3 
+Yôjinbô  8.3 
+The Third Man  8.3 
+Scarface  8.3 
+Batman Begins  8.3 
+Some Like It Hot  8.3 
+Unforgiven  8.3 
+3 Idiots  8.5 
+Up  8.3 
+Raging Bull  8.3 
+Der Untergang  8.3 
+Jagten  8.3 
+Chinatown  8.3 
+Die Hard  8.3 
+The Great Escape  8.3 
+Good Will Hunting  8.3 
+Heat  8.3 
+On the Waterfront  8.3 
+Mad Max: Fury Road  8.3 
+Pan's Labyrinth  8.3 
+Mr. Smith Goes to Washington  8.3 
+The Bridge on the River Kwai  8.2 
+Tonari no Totoro  8.3 
+Ran  8.3 
+The Gold Rush  8.3 
+Ikiru  8.3 
+Det sjunde inseglet  8.3 
+Blade Runner  8.2 
+El secreto de sus ojos  8.2 
+Smultronstället  8.3 
+The General  8.3 
+Lock, Stock and Two Smoking Barrels  8.2 
+The Elephant Man  8.2 
+Casino  8.2 
+Hauru no ugoku shiro  8.2 
+The Wolf of Wall Street  8.2 
+Warrior  8.2 
+Gran Torino  8.2 
+V for Vendetta  8.2 
+The Big Lebowski  8.2 
+Rebecca  8.2 
+Judgment at Nuremberg  8.3 
+A Beautiful Mind  8.2 
+The Deer Hunter  8.2 
+How to Train Your Dragon  8.2 
+Cool Hand Luke  8.2 
+Gone with the Wind  8.2 
+Fargo  8.2 
+Trainspotting  8.2 
+It Happened One Night  8.2 
+Dial M for Murder  8.2 
+Into the Wild  8.2 
+Gone Girl  8.2 
+The Sixth Sense  8.2 
+Rush  8.2 
+Finding Nemo  8.2 
+The Maltese Falcon  8.2 
+Mary and Max  8.2 
+No Country for Old Men  8.1 
+The Thing  8.2 
+Incendies  8.2 
+Kill Bill: Vol. 1  8.1 
+Hotel Rwanda  8.2 
+Life of Brian  8.1 
+Platoon  8.1 
+Le salaire de la peur  8.2 
+Butch Cassidy and the Sundance Kid  8.1 
+There Will Be Blood  8.1 
+Network  8.1 
+Touch of Evil  8.2 
+Les quatre cents coups  8.2 
+Stand by Me  8.1 
+12 Years a Slave  8.1 
+The Princess Bride  8.2 
+Persona  8.2 
+Amores perros  8.1 
+Annie Hall  8.1 
+The Grand Budapest Hotel  8.1 
+In the Name of the Father  8.1 
+Million Dollar Baby  8.1 
+Ben-Hur  8.1 
+The Grapes of Wrath  8.1 
+Hachi: A Dog's Tale  8.2 
+Shutter Island  8.1 
+Kaze no tani no Naushika  8.1 
+Les diaboliques  8.2 
+Sin City  8.1 
+Udaan  8.4 
+The Wizard of Oz  8.1 
+Gandhi  8.1 
+Stalker  8.2 
+The Bourne Ultimatum  8.1 
+The Best Years of Our Lives  8.2 
+Donnie Darko  8.1 
+Relatos salvajes  8.2 
+Jurassic Park  8.1 
+Strangers on a Train  8.1 
+8½  8.1 
+The Avengers  8.1 
+Before Sunrise  8.1 
+Twelve Monkeys  8.1 
+The Terminator  8.1 
+Mou gaan dou  8.1 
+Jaws  8.1 
+Salinui chueok  8.1 
+Groundhog Day  8.1 
+Monsters, Inc.  8.1 
+La battaglia di Algeri  8.2 
+Guardians of the Galaxy  8.1 
+Harry Potter and the Deathly Hallows: Part 2  8.1 
+The Truman Show  8.1 
+Rocky  8.1 
+Kumonosu-jô  8.2 
+Barry Lyndon  8.1 
+Fanny och Alexander  8.1 
+Dog Day Afternoon  8.1 
+Yip Man  8.1 
+The Imitation Game  8.1 
+The King's Speech  8.1 
+High Noon  8.1 
+La haine  8.1 
+Per un pugno di dollari  8.1 
+Pirates of the Caribbean: The Curse of the Black Pearl  8.1 
+Notorious  8.1 
+Tenkû no shiro Rapyuta  8.1 
+Prisoners  8.1 
+The Help  8.1 
+Roman Holiday  8.1 
+Who's Afraid of Virginia Woolf?  8.1 
+Bom yeoreum gaeul gyeoul geurigo bom  8.1 
+The Night of the Hunter  8.1 
+Beauty and the Beast  8.0 
+Papillon  8.1 
+La Strada  8.1 
+Before Sunset  8.1 
+Anatomy of a Murder  8.1 
+X-Men: Days of Future Past  8.1 
+The Hustler  8.1 
+The Graduate  8.0 
+Gangs of Wasseypur  8.4 
+Tropa de Elite 2: O Inimigo Agora é Outro  8.1 
+The Big Sleep  8.1 
+The Killing  8.1 
+Trois couleurs: Rouge  8.1 
+Akira  8.1 
