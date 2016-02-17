@@ -25,20 +25,16 @@ def modify(name):
 	return ans
 
 def get_imdb_rating(movie_name):
-	base_url = "http://www.imdb.com/find?q="
 	try:
 		headers={'User-Agent':"Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11"}
-		url = base_url + modify(movie_name)
+		movie_name = modify(movie_name)
+		url = "http://www.omdbapi.com/?t=" + movie_name + "&y=&plot=short&r=xml"
 		r = requests.get(url, headers=headers)
 		html = r.text.encode("utf8")
 		soup = BeautifulSoup(html)
-		ex = soup.find('table', attrs={'class': "findList"})
-		movie_url = "http://www.imdb.com" + ex.find('tr').find('a')['href']
-		new_soup = BeautifulSoup((requests.get(movie_url, headers=headers)).text.encode("utf8"))
-		return new_soup.find('div', attrs={'class': "imdbRating"}).find('span', attrs={'itemprop': "ratingValue"}).text
+		return soup.find('movie')['imdbrating']
 	except:
 		return "0"
-		# get_imdb_rating(movie_name)
 
 
 def get_requests(url):

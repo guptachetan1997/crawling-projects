@@ -1,11 +1,11 @@
-Wings;7.3
+Wings;7.8
 The Broadway Melody;6.4
 All Quiet on the Western Front;8.1
-Cimarron;6.4
-Grand Hotel;6.7
-Cavalcade [H];6.1
-It Happened One Night [I];8.2
-Mutiny on the Bounty [J];7.2
+Cimarron;6.0
+Grand Hotel;7.6
+Cavalcade [H];0
+It Happened One Night [I];0
+Mutiny on the Bounty [J];0
 The Great Ziegfeld;6.8
 The Life of Emile Zola;7.3
 You Can't Take It With You;8.0
@@ -25,10 +25,10 @@ An American in Paris;7.3
 The Greatest Show on Earth;6.7
 From Here to Eternity;7.8
 On the Waterfront;8.3
-Marty;0
+Marty;7.7
 Around the World in 80 Days;5.8
 The Bridge on the River Kwai;8.2
-Gigi;0
+Gigi;6.9
 Ben-Hur;8.1
 The Apartment;8.3
 West Side Story;7.6
@@ -44,7 +44,7 @@ Patton;8.0
 The French Connection;7.8
 The Godfather;9.2
 The Sting;8.3
-The Godfather Part II [O];9.0
+The Godfather Part II [O];0
 One Flew Over the Cuckoo's Nest;8.7
 Rocky;8.1
 Annie Hall;8.1
@@ -57,7 +57,7 @@ Terms of Endearment;7.4
 Amadeus;8.3
 Out of Africa;7.2
 Platoon;8.1
-The Last Emperor [O];7.8
+The Last Emperor [O];0
 Rain Man;8.0
 Driving Miss Daisy;7.4
 Dances with Wolves;8.0
@@ -78,10 +78,11 @@ Million Dollar Baby;8.1
 Crash;7.9
 The Departed;8.5
 No Country for Old Men;8.1
-Slumdog Millionaire [O];8.0
+Slumdog Millionaire [O];0
 The Hurt Locker;7.6
 The King's Speech;8.0
 The Artist;8.0
 Argo;7.8
 12 Years a Slave;8.1
 Birdman or (The Unexpected Virtue of Ignorance);7.8
+The Big Short;7.9
