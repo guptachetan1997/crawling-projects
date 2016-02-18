@@ -44,7 +44,7 @@ def download_video_youtube(url,tagline):
 	ex = soup.find('a',attrs = {'class':"yt-ui-ellipsis-2"})
 	video_url = "https://www.youtube.com" + ex['href']
 	print tagline
-	os.system("youtube-dl --extract-audio --audio-format mp3 " + video_url)
+	os.system("youtube-dl --extract-audio --audio-format mp3 -o \%\(title\)s.\%\(ext\)s " + video_url)
 	print
 	print
 
