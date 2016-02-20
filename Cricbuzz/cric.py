@@ -49,10 +49,10 @@ def get_requests(url, requested_id):
                 team = x.find("bttm")['sname']
                 crr = ((x.find('mscr')).find('inngsdetail'))['crr']
                 rrr = ((x.find('mscr')).find('inngsdetail'))['rrr']
-                if rrr == 0:
-                    score = str(team) + ": " + x.find('inngs')['r'] + "/" + x.find('inngs')['wkts'] + " OVRS: " + x.find('inngs')['ovrs'] + " Cur.RR: " + crr
+                if rrr == "0":
+                    score = str(team) + ": " + x.find('inngs')['r'] + "/" + x.find('inngs')['wkts'] + " OVRS: " + x.find('inngs')['ovrs'] + " Cur.RR: " + crr + "\n" + x.find('state')['status']
                 else:    
-                    score = str(team) + ": " + x.find('inngs')['r'] + "/" + x.find('inngs')['wkts'] + " OVRS: " + x.find('inngs')['ovrs'] + " Req.RR: " + rrr
+                    score = str(team) + ": " + x.find('inngs')['r'] + "/" + x.find('inngs')['wkts'] + " OVRS: " + x.find('inngs')['ovrs'] + " Req.RR: " + rrr + "\n" + x.find('state')['status']
                 print score
                 tagline  = x['mchdesc'] + "\n" + score
                 sendmessage(x['mchdesc'], score)
