@@ -75,7 +75,7 @@ def get_requests(url):
 
 
 def main():
-    url = "http://dl2.filmha.org/Serial/Death%20Note/"
+    url = "http://dl2.filmha.org/Serial/Wolverine%20and%20the%20X-Men/"
     get_requests(url)
 
 
