@@ -54,7 +54,7 @@ def get_requests(url,ref_id):
 	data_file.close()
 
 def main():
-	url = "https://www.google.com/finance?q=NSE%3AM%26M&ei=yTS4VqnAAsGP0ATHs7DAAQ"
+	url = "https://www.google.com/finance?q=NSE%3ABHARTIARTL&ei=BKDKVtmsLdDDugSY17_ADQ"
 	ref_id = get_reference_id(url)
 	try:
 		while(1):
