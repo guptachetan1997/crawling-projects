@@ -75,7 +75,7 @@ def get_requests(url):
 
 
 def main():
-    url = "http://dl2.filmha.org/Serial/Wolverine%20and%20the%20X-Men/"
+    url = "http://dl2.filmha.org/Serial/Better%20Call%20Saul/"
     get_requests(url)
 
 
