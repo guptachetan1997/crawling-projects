@@ -75,7 +75,8 @@ def get_requests(url):
 
 
 def main():
-    url = "http://dl2.filmha.org/Serial/Better%20Call%20Saul/"
+    #url = "http://dl2.filmha.org/Serial/Better%20Call%20Saul/"
+    url = raw_input("Enter TV Series URL : ")
     get_requests(url)
 
 

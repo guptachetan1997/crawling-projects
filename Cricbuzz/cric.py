@@ -1,9 +1,9 @@
 import requests
-import random 
+import random
 import os,subprocess,time
 from bs4 import BeautifulSoup
 
-user_agents = [  
+user_agents = [
     'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11',
     'Opera/9.25 (Windows NT 5.1; U; en)',
     'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)',
@@ -22,16 +22,21 @@ def get_requested_id(url):
     try:
         headers={'User-Agent':user_agents[random.randint(0,8)]}
         r = requests.get(url,headers = headers)
-        r.raise_for_status()  
+        r.raise_for_status()
         html = r.text.encode("utf8")
         soup = BeautifulSoup(html)
         ex = soup.findAll('match')
+        flag = 0
         for x in ex:
             if x.find('state')['mchstate'] == "inprogress":
+                flag = 1
                 print x['mchdesc'] + " :id: " + x['id']
         print
-        requested_id = raw_input("Enter the id : ")
-        return str(requested_id)
+        if flag == 1:
+            requested_id = raw_input("Enter the id : ")
+            return str(requested_id)
+        else:
+            return str("SORRY")
     except:
         pass
 
@@ -39,7 +44,7 @@ def get_requests(url, requested_id):
     try:
         headers={'User-Agent':user_agents[random.randint(0,8)]}
         r = requests.get(url,headers = headers)
-        r.raise_for_status()  
+        r.raise_for_status()
         html = r.text.encode("utf8")
         soup = BeautifulSoup(html)
         ex = soup.findAll('match')
@@ -51,7 +56,7 @@ def get_requests(url, requested_id):
                 rrr = ((x.find('mscr')).find('inngsdetail'))['rrr']
                 if rrr == "0":
                     score = str(team) + ": " + x.find('inngs')['r'] + "/" + x.find('inngs')['wkts'] + " OVRS: " + x.find('inngs')['ovrs'] + " Cur.RR: " + crr + "\n" + x.find('state')['status']
-                else:    
+                else:
                     score = str(team) + ": " + x.find('inngs')['r'] + "/" + x.find('inngs')['wkts'] + " OVRS: " + x.find('inngs')['ovrs'] + " Req.RR: " + rrr + "\n" + x.find('state')['status']
                 print score
                 tagline  = x['mchdesc'] + "\n" + score
@@ -62,10 +67,13 @@ def get_requests(url, requested_id):
 def main():
     url = "http://synd.cricbuzz.com/j2me/1.0/livematches.xml"
     requested_id = get_requested_id(url)
-    while True:
-        get_requests(url, requested_id)
-        time.sleep(15)
+    if requested_id != "SORRY":
+        while True:
+            get_requests(url, requested_id)
+            time.sleep(15)
+    else:
+        print "No match is currently live."
 
 if __name__ == '__main__':
-  main()
+    main()
 
