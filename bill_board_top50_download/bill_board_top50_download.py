@@ -2,6 +2,7 @@ import random
 import os,subprocess
 import requests
 from bs4 import BeautifulSoup
+from ID3 import *
 
 user_agents = [  
     'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11',
@@ -38,13 +39,17 @@ def get_requests(url):
 	html = r.text.encode("utf8")
 	return html
 
-def download_video_youtube(url,tagline):
+def download_video_youtube(url,tagline,song_name,artist_name):
 	html = get_requests(url)
 	soup = BeautifulSoup(html)
 	ex = soup.find('a',attrs = {'class':"yt-ui-ellipsis-2"})
 	video_url = "https://www.youtube.com" + ex['href']
 	print tagline
-	os.system("youtube-dl --extract-audio --audio-format mp3 -o \%\(title\)s.\%\(ext\)s " + video_url)
+	tt = song_name + ".%(ext)s"
+	os.system("youtube-dl --extract-audio --audio-format mp3 -o " + "\"" + tt + "\"" + " " + video_url)
+	song = ID3(song_name + ".mp3")
+	song['TITLE'] = song_name
+	song['ARTIST'] = artist_name
 	print
 	print
 
@@ -64,7 +69,10 @@ def get_song_name():
 			search_query = song_name + artist_name
 			search_query = change_string(search_query)
 			tagline = str(i) + ". " + correct_string(song_name) + " : " + correct_string(artist_name)
-			download_video_youtube(base_url + search_query,tagline)
+			try :
+				download_video_youtube(base_url + search_query,tagline, correct_string(song_name), correct_string(artist_name))
+			except:
+				pass
 		i = i+1
 		if(i > 100):
 			break
