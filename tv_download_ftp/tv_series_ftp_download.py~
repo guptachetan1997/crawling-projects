@@ -34,7 +34,7 @@ threadlist = []
 
 
 def get_requests(url):
-    base = "http://tv.dl-pars.in"
+    base = "http://dl2.filmha.org"
     try:
         headers = {'User-Agent': user_agents[random.randint(0, 8)]}
         r = requests.get(url, headers=headers)

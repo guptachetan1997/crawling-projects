@@ -47,7 +47,7 @@ def download_video_youtube(url,tagline,song_name,artist_name):
 	print tagline
 	tt = artist_name + "-" + song_name + ".%(ext)s"
 	os.system("youtube-dl --extract-audio --audio-format mp3 -o " + "\"" + tt + "\"" + " " + video_url)
-	song = ID3(artist_name + "-" + song_name + ".mp3")
+	song = ID3(artist_name + " - " + song_name + ".mp3")
 	song['TITLE'] = song_name
 	song['ARTIST'] = artist_name
 	print
