@@ -45,7 +45,7 @@ def download_video_youtube(url,tagline,song_name,artist_name):
 	ex = soup.find('a',attrs = {'class':"yt-ui-ellipsis-2"})
 	video_url = "https://www.youtube.com" + ex['href']
 	print tagline
-	tt = artist_name + "-" + song_name + ".%(ext)s"
+	tt = artist_name + " - " + song_name + ".%(ext)s"
 	os.system("youtube-dl --extract-audio --audio-format mp3 -o " + "\"" + tt + "\"" + " " + video_url)
 	song = ID3(artist_name + " - " + song_name + ".mp3")
 	song['TITLE'] = song_name
