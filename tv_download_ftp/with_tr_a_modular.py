@@ -35,14 +35,15 @@ def download_season(season_url):
     r.raise_for_status()
     html = r.text.encode("utf8")
     soup = BeautifulSoup(html)
-    ex = soup.findAll('tr')
+    ex = soup.findAll('a')
     episode_list = []
-    for tr in ex[5:]:
+    for tr in ex[1:]:
         try:
-            episode_list.append("http://sv1.bia2movies02.in/Series/" + str(tr.find('a')['href']))
+            episode_list.append("http://dl2.filmha.org/" + str(tr['href']))
         except:
             pass
     i=0
+    #print episode_list
     while i< len(episode_list):
         j=0
         while j<4 and i<len(episode_list):
@@ -57,17 +58,20 @@ def download_season(season_url):
 
 
 def get_requests(url):
-    base_url = "http://sv1.bia2movies02.in/Series/listing.php"
+    base_url = "http://dl2.filmha.org/Serial/"
     # try:
     headers = {'User-Agent': user_agents[random.randint(0, 8)]}
     r = requests.get(url, headers=headers)
     r.raise_for_status()
     html = r.text.encode("utf8")
     soup = BeautifulSoup(html)
-    ex = soup.findAll('tr')
-    for tr in ex[5:]:
+    ex = soup.findAll('a')
+    # print ex[0]['href']
+    i=1
+    for tr in ex[1:]:
         try:
-            season_url =  base_url + tr.find('a')['href']
+            season_url =  url + "/0" + str(i) + "/"
+            i = i+1
             download_season(season_url)
             print
         except:
@@ -75,7 +79,7 @@ def get_requests(url):
 
 
 def main():
-    url = "http://sv1.bia2movies02.in/Series/listing.php?d=That%2070s%20Show"
+    url = "http://dl2.filmha.org/Serial/Orange_Is_The_New_Black/"
     get_requests(url)
 
 
