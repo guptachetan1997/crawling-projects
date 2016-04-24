@@ -15,7 +15,7 @@ def get_requests(url):
 
 def parse_news(html):
 	f = open("headline.txt","w")
-	soup= BeautifulSoup(html)
+	soup= BeautifulSoup(html, "lxml")
 	ex= soup.find('div', attrs={'class' :"main-content-with-gutter-wrapper"})
 	eex = ex.findAll('span', attrs={'class' :"titletext"})
 	i=1

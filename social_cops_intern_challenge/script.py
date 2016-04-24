@@ -11,7 +11,7 @@ def create_xml_from_api():
 		f.write(response.content)
 
 def send_soup():
-	s = BeautifulSoup(open("/home/chetan/Desktop/example.xml")).findAll('page')
+	s = BeautifulSoup(open("/home/chetan/Desktop/example.xml"), "lxml").findAll('page')
 	for page in s:
 		parse_xml(page)
 

@@ -16,7 +16,7 @@ def get_requests(url):
 def parse_news(html):
 	print("The upcoming events on codechef are : ")
 	print
-	soup= BeautifulSoup(html)
+	soup= BeautifulSoup(html,"lxml")
 	ex= soup.find('div', attrs={'class' :"table-questions"})
 	eex = ex.findAll('td')
 	i=1

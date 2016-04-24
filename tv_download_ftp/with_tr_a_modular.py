@@ -34,7 +34,7 @@ def download_season(season_url):
     r = requests.get(season_url, headers=headers)
     r.raise_for_status()
     html = r.text.encode("utf8")
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "lxml")
     ex = soup.findAll('a')
     episode_list = []
     for tr in ex[1:]:
@@ -64,7 +64,7 @@ def get_requests(url):
     r = requests.get(url, headers=headers)
     r.raise_for_status()
     html = r.text.encode("utf8")
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "lxml")
     ex = soup.findAll('a')
     # print ex[0]['href']
     i=1

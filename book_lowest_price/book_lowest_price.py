@@ -14,7 +14,7 @@ def get_requests(url):
 	return html
 
 def parse_news(html):
-	soup= BeautifulSoup(html)
+	soup= BeautifulSoup(html, "lxml")
 	ex= soup.find('div', attrs={'class' :"priceRow"})
 	site_name= ex.find('div', attrs={'class' :"col-xs-4"})
 	site_link = ex.find('a', attrs={'class': "btn btn-xs buyButton"})

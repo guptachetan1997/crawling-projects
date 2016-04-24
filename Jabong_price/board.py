@@ -39,7 +39,7 @@ def get_requests(url):
 		r = requests.get(url,headers = headers)
 		r.raise_for_status()  
 		html = r.text.encode("utf8")  
-		soup = BeautifulSoup(html)
+		soup = BeautifulSoup(html, "lxml")
 		ex = soup.find('span', attrs={'id':"priceblock_saleprice"})
 		prices = (ex.text.split()[0]).split(',')
 		total_price = ""

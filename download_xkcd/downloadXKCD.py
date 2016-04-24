@@ -13,7 +13,7 @@ def get_requests(url):
 	r = requests.get(url,headers = headers)
 	r.raise_for_status()
 	html = r.text.encode("utf8")
-	soup = BeautifulSoup(html)
+	soup = BeautifulSoup(html, "lxml")
 	ex = soup.find('div',{'id':"comic"})
 	eex = ex.find('img')
 	if eex != None:

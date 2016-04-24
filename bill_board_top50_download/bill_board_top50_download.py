@@ -41,7 +41,7 @@ def get_requests(url):
 
 def download_video_youtube(url,tagline,song_name,artist_name):
 	html = get_requests(url)
-	soup = BeautifulSoup(html)
+	soup = BeautifulSoup(html, "lxml")
 	ex = soup.find('a',attrs = {'class':"yt-ui-ellipsis-2"})
 	video_url = "https://www.youtube.com" + ex['href']
 	print tagline

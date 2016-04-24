@@ -31,7 +31,7 @@ def get_reference_id(url):
 	    r = requests.get(url,headers = headers)
 	    r.raise_for_status()  
 	    html = r.text.encode("utf8")  
-	    soup = BeautifulSoup(html)
+	    soup = BeautifulSoup(html, "lxml")
 	    ex = soup.find('span', attrs={'class': "pr"})
 	    return str(ex.find('span')['id'])
   	except:
@@ -44,7 +44,7 @@ def get_requests(url,ref_id):
 		r = requests.get(url,headers = headers)
 		r.raise_for_status()	
 		html = r.text.encode("utf8")	
-		soup = BeautifulSoup(html)
+		soup = BeautifulSoup(html, "lxml")
 		ex = soup.find('span',attrs = {'id':ref_id})
 		time_stamp = strftime("%H:%M:%S", gmtime())
 		data_file.write(str(str(time_stamp) + ";" +  ex.text + "\n"))

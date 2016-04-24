@@ -27,7 +27,7 @@ def get_requests(url):
     r = requests.get(url,headers = headers)
     r.raise_for_status()
     html = r.text.encode("utf8")
-    soup = BeautifulSoup(html)
+    soup = BeautifulSoup(html, "lxml")
     ex = soup.find('image')
     eex = ex.find('url')
     photo_url =  "http://www.bing.com" + eex.text

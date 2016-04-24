@@ -14,14 +14,14 @@ def get_requests(url):
 	return html
 
 def parse_movie(html):
-	soup= BeautifulSoup(html)
+	soup= BeautifulSoup(html, "lxml")
 	ex= soup.find('div', attrs={'id' :"pagecontent", 'class' :"pagecontent"})
 	eex = ex.find('span', {'class' :"itemprop", 'itemprop' :"name"})
 	eeex = ex.find('div', {'class' :"titlePageSprite star-box-giga-star"})
 	print "%s %s"%(eex.text,eeex.text)
 
 def parse(html):
-	soup= BeautifulSoup(html)
+	soup= BeautifulSoup(html, "lxml")
 	ex= soup.find('div', attrs={'class' :"lister"})
 	eex = soup.findAll('td', attrs={'class' :"titleColumn"})
 	for eeex in eex:

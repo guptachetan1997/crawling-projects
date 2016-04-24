@@ -20,7 +20,7 @@ def get_players_DOM(url):
 	r = requests.get(url,headers = headers)
 	r.raise_for_status()
 	html = r.text.encode("utf8")
-	soup = BeautifulSoup(html)
+	soup = BeautifulSoup(html, "lxml")
 	ex = soup.find('table', attrs={'class' : "engineTable"})
 	players = ex.findAll('tr', attrs={'class':"data2"})
 	return players
@@ -42,7 +42,7 @@ def get_players(url,url1):
 	r = requests.get(url,headers = headers)
 	r.raise_for_status()
 	html = r.text.encode("utf8")
-	soup = BeautifulSoup(html)
+	soup = BeautifulSoup(html, "lxml")
 	ex = soup.find('table', attrs={'class' : "engineTable"})
 	players = ex.findAll('tr', attrs={'class':"data2"})
 

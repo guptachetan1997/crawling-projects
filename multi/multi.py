@@ -32,7 +32,7 @@ def get_requests(url,sym):
 		r = requests.get(url,headers = headers)
 		r.raise_for_status()
 		html = r.text.encode("utf8")
-		soup = BeautifulSoup(html)
+		soup = BeautifulSoup(html, "lxml")
 		ex = soup.find('span',{'class':"time_rtq_ticker"})
 		print sym + " " + ex.text
 		time_stamp = strftime("%H:%M:%S", gmtime())

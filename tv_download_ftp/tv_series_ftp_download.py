@@ -40,7 +40,7 @@ def get_requests(url):
         r = requests.get(url, headers=headers)
         r.raise_for_status()
         html = r.text.encode("utf8")
-        soup = BeautifulSoup(html)
+        soup = BeautifulSoup(html, "lxml")
         ex = soup.findAll('a')
         i = 1
         for x in ex:
@@ -50,7 +50,7 @@ def get_requests(url):
                 if i > 0:
                     res = requests.get(season_url, headers=headers)
                     htm = res.text.encode("utf8")
-                    s = BeautifulSoup(htm)
+                    s = BeautifulSoup(htm, "lxml")
                     episode_list = s.find_all('a')
                     length = len(episode_list)
                     global ii

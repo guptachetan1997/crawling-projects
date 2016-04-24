@@ -24,7 +24,7 @@ def get_requested_id(url):
         r = requests.get(url,headers = headers)
         r.raise_for_status()
         html = r.text.encode("utf8")
-        soup = BeautifulSoup(html)
+        soup = BeautifulSoup(html, "lxml")
         ex = soup.findAll('match')
         flag = 0
         for x in ex:
@@ -46,7 +46,7 @@ def get_requests(url, requested_id):
         r = requests.get(url,headers = headers)
         r.raise_for_status()
         html = r.text.encode("utf8")
-        soup = BeautifulSoup(html)
+        soup = BeautifulSoup(html, "lxml")
         ex = soup.findAll('match')
         for x in ex:
             if x.find('state')['mchstate'] == "inprogress" and x['id'] == requested_id:

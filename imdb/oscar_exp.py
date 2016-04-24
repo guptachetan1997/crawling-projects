@@ -31,7 +31,7 @@ def get_imdb_rating(movie_name):
 		url = "http://www.omdbapi.com/?t=" + movie_name + "&y=&plot=short&r=xml"
 		r = requests.get(url, headers=headers)
 		html = r.text.encode("utf8")
-		soup = BeautifulSoup(html)
+		soup = BeautifulSoup(html, "lxml")
 		return soup.find('movie')['imdbrating']
 	except:
 		return "0"
@@ -43,7 +43,7 @@ def get_requests(url):
 		headers={'User-Agent':user_agents[random.randint(0,8)]}
 		r = requests.get(url, headers=headers)
 		html = r.text.encode("utf8")
-		soup = BeautifulSoup(html)
+		soup = BeautifulSoup(html, "lxml")
 		ex = soup.findAll('table', attrs={'class': "wikitable"})
 		try:
 			xx=1

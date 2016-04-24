@@ -20,7 +20,7 @@ def get_article(url,title,news):
 		headers={'User-Agent':user_agents[random.randint(0,8)]}
 		r= requests.get(url, headers=headers)
 		html= r.text.encode("utf8")
-		soup = BeautifulSoup(html)
+		soup = BeautifulSoup(html, "lxml")
 		ex = soup.findAll('p')
 		article = ""
 		for x in ex:
@@ -39,7 +39,7 @@ def get_requests(url):
 		headers={'User-Agent':user_agents[random.randint(0,8)]}
 		r= requests.get(url, headers=headers)
 		html= r.text.encode("utf8")
-		soup = BeautifulSoup(html)
+		soup = BeautifulSoup(html, "lxml")
 		ex = soup.findAll('h2', attrs = {'class':"esc-lead-article-title"})
 		i=0
 		for x in ex:
