@@ -1,7 +1,6 @@
 import webbrowser
 import os
 import sys
-import pyperclip
 import requests
 from bs4 import BeautifulSoup
 from threading import Thread
@@ -31,9 +30,9 @@ def main():
 	directory = "xkcd"
 	if os.path.exists(directory) == False:
 		os.makedirs('xkcd')
-	ids = 1595
+	ids = 1679
 	j=1
-	while ids>5:
+	while ids>1600:
 		j=0
 		while j<= 6 and ids-j>5:
 			url = base_url + str(ids)

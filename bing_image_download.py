@@ -4,6 +4,7 @@ import os,subprocess
 import datetime
 from bs4 import BeautifulSoup
 
+#Note that in the next version we must first check if the file already exists or not instead of overwritng 
 user_agents = [
     'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11',
     'Opera/9.25 (Windows NT 5.1; U; en)',
@@ -30,6 +31,8 @@ def get_requests(url):
     soup = BeautifulSoup(html, "lxml")
     ex = soup.find('image')
     eex = ex.find('url')
+    photo_text = ex.find('copyright')
+    print photo_text.text
     photo_url =  "http://www.bing.com" + eex.text
     photo_url = modify_resolution(photo_url)
     res = requests.get(photo_url,headers = headers)
@@ -38,11 +41,12 @@ def get_requests(url):
     for chunk in res.iter_content(100000):
         imageFile.write(chunk)
     imageFile.close()
-    os.system("gsettings set org.gnome.desktop.background picture-uri file:///home/chetan/Projects/crawling/walls/" + date)
+    os.system("gsettings set org.gnome.desktop.background picture-uri file:///home/chetan/Pictures/walls/" + date)
   except:
     pass
 
 def main():
+  #download the daily release of the bing wallpaper by microsoft
   url = "http://www.bing.com/HPImageArchive.aspx?format=xml&idx=0&n=1&mkt=en-IN"
   directory = "walls"
   if os.path.exists(directory) == False:
@@ -51,3 +55,4 @@ def main():
 
 if __name__ == '__main__':
   main()
+

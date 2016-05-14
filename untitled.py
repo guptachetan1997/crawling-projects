@@ -20,6 +20,7 @@ def get_requests(url,x):
   r = requests.get(url,headers = headers)
   print x,user_agents[x],r.raise_for_status()
   html = r.text.encode("utf8")
+  soup = BeautifulSoup(html, "lxml")
 
 def main():
   url = "http://www.google.com"

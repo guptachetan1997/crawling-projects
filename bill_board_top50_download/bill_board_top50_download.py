@@ -56,7 +56,7 @@ def download_video_youtube(url,tagline,song_name,artist_name):
 def get_song_name():
 	url = "http://www.billboard.com/charts/hot-100"
 	html = get_requests(url)
-	soup = BeautifulSoup(html)
+	soup = BeautifulSoup(html, "lxml")
 	x = soup.findAll('div',attrs={'class':"chart-row__primary"})
 	i = 1
 	for ex in x:
