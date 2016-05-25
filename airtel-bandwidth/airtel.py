@@ -24,7 +24,6 @@ def get_requests(url):
 	print "Connection : " + dsl
 	print "Bandwidth left : " + bandwidth_left
 	print "Days Left : " + days_left
-    
 
 def main():
 	url = "http://www.airtel.in/smartbyte-s/page.html"
