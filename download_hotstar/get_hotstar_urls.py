@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from django.template.defaultfilters import slugify
 import time
 
-driver = webdriver.PhantomJS()
+driver = webdriver.PhantomJS() #getting to start the PhantomJS header webdriver using selenium
 time.sleep(4)
 driver.set_window_size(1120, 550)
 driver.get("http://www.hotstar.com/tv/shockers/9153/episodes/9038/9992")
