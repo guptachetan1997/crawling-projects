@@ -12,32 +12,31 @@ def com_reg():
 	driver.find_element_by_xpath("//input[@type='password']").send_keys("@cafeKAka")
 	driver.find_element_by_xpath("//button[@class='login-login-button']").click()
 	print "Logged in"
-	time.sleep(3)
-	driver.find_element_by_xpath("//li[@id='returnexchange']").click()
-	driver.find_element_by_xpath("//li[@id='refundnotreceivedreturnpicked']").click()
-	driver.find_element_by_xpath("//input[@name='select-order-field']").click()
-	print "Order selected"
-	time.sleep(3)
-	driver.find_element_by_xpath("//div[@class='list-row order']").click()
-	time.sleep(3)
-	driver.find_element_by_xpath("//button[@type='button']").click()
-	time.sleep(3)
-	# driver.find_element_by_tag_name('textarea')
-	driver.find_element_by_name('notes').send_keys(msg)
-	# driver.find_element_by_xpath("//textarea").send_keys(msg)
-	driver.find_element_by_xpath("//button[@type='button']").click()
-	print "Complaint registered"
 	time.sleep(2)
+	for i in range(1,50):
+		print "Complaint #" + str(i)
+		driver.get("http://www.myntra.com/contactus")
+		time.sleep(2)
+		driver.find_element_by_xpath("//li[@id='returnexchange']").click()
+		driver.find_element_by_xpath("//li[@id='refundnotreceivedreturnpicked']").click()
+		driver.find_element_by_xpath("//input[@name='select-order-field']").click()
+		print "Order selected"
+		time.sleep(1)
+		driver.find_element_by_xpath("//div[@class='list-row order']").click()
+		time.sleep(1)
+		driver.find_element_by_xpath("//button[@type='button']").click()
+		time.sleep(1)
+		# driver.find_element_by_tag_name('textarea')
+		driver.find_element_by_name('notes').send_keys(msg)
+		# driver.find_element_by_xpath("//textarea").send_keys(msg)
+		driver.find_element_by_xpath("//button[@type='button']").click()
+		print "Complaint registered"
+		print
+		time.sleep(1)
 	driver.quit()
 
 def main():
-	for i in range(1,50):
-		print "Complaint #" + str(i)
-		try :
-			com_reg()
-		except:
-			print "Little Fuck Ups"
-		print
+	com_reg()
 
 if __name__ == '__main__':
 	main()
