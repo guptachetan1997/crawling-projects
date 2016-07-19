@@ -23,7 +23,7 @@ def sendmessage(message):
 
 
 def download_episode(episode_url):
-    print episode_url
+    print (episode_url)
     os.system("wget -c \"" + episode_url + "\" >/dev/null 2>&1")
 
 
@@ -73,7 +73,7 @@ def get_requests(url):
             season_url =  url + "/0" + str(i) + "/"
             i = i+1
             download_season(season_url)
-            print
+            print()
         except:
             pass
 

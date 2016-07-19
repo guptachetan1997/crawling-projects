@@ -32,7 +32,7 @@ def get_requests(url):
     ex = soup.find('image')
     eex = ex.find('url')
     photo_text = ex.find('copyright')
-    print photo_text.text
+    print (photo_text.text)
     photo_url =  "http://www.bing.com" + eex.text
     photo_url = modify_resolution(photo_url)
     res = requests.get(photo_url,headers = headers)

@@ -47,8 +47,8 @@ def get_requests(url,ref_id):
 		soup = BeautifulSoup(html, "lxml")
 		ex = soup.find('span',attrs = {'id':ref_id})
 		time_stamp = strftime("%H:%M:%S", gmtime())
+		print (str(time_stamp) + ";" +  ex.text)
 		data_file.write(str(str(time_stamp) + ";" +  ex.text + "\n"))
-		print str(time_stamp) + ";" +  ex.text
 	except:
 		pass
 	data_file.close()

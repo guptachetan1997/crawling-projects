@@ -2,7 +2,7 @@ import os
 import sys
 
 def download(url):
-	print url
+	print (url)
 	os.system("youtube-dl " + url)
 
 def main():
@@ -13,7 +13,7 @@ def main():
 				url = line[:len(line)-1]
 				download(url)
 	except IOError:
-		print "File does not exist."
+		print ("File does not exist.")
 	
 
 if __name__ == '__main__':

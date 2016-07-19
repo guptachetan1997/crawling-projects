@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 from random import choice
 
-driver = webdriver.PhantomJS() #getting to start the PhantomJS header webdriver using selenium
+driver = webdriver.Chrome() #getting to start the PhantomJS header webdriver using selenium
 driver.set_window_size(1120, 550)
 driver.get("http://siddharth.questionpro.com/")
 

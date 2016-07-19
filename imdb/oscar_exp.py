@@ -51,13 +51,13 @@ def get_requests(url):
 				movie_name = x.find('td').text
 				rating = get_imdb_rating(movie_name)
 				put = str(movie_name) + ";" + str(rating) + "\n"
-				print xx
+				print (xx)
 				xx+=1
 				file.write(put)
 		except:
-			print "Fuck the for loop"
+			print ("Fuck the for loop")
 	except :
-		print "Fuck the get_requests"
+		print ("Fuck the get_requests")
 	file.close
 
 def main():

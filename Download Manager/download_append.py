@@ -6,6 +6,6 @@ def main():
 		with open('list.txt', 'a') as file:
 			file.write(url) 
 	except:
-		"Print some error occured"
+		print("Print some error occured")
 if __name__ == '__main__':
 	main()

@@ -18,9 +18,9 @@ def parse_news(html):
 	ex= soup.find('div', attrs={'class' :"priceRow"})
 	site_name= ex.find('div', attrs={'class' :"col-xs-4"})
 	site_link = ex.find('a', attrs={'class': "btn btn-xs buyButton"})
-	print "Lowest Price Found ON : " + site_name.text
+	print ("Lowest Price Found ON : " + site_name.text)
 	link_final = "https://www.vivilio.com" + site_link['href']
-	print link_final
+	print (link_final)
 	webbrowser.open(link_final)
 
 	#eex = ex.findAll('span', attrs={'class' :"titletext"})

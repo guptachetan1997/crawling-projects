@@ -30,7 +30,7 @@ def parse_news(html):
 			#stringer = ""
 			stringer = stringer + "\n"
 		i = i+1
-	print stringer
+	print (stringer)
 	#sendmessage("upcoming codechef events ")
 
 def task_assign(url):

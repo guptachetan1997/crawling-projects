@@ -18,7 +18,7 @@ def parse_movie(html):
 	ex= soup.find('div', attrs={'id' :"pagecontent", 'class' :"pagecontent"})
 	eex = ex.find('span', {'class' :"itemprop", 'itemprop' :"name"})
 	eeex = ex.find('div', {'class' :"titlePageSprite star-box-giga-star"})
-	print "%s %s"%(eex.text,eeex.text)
+	print ("%s %s"%(eex.text,eeex.text))
 
 def parse(html):
 	soup= BeautifulSoup(html, "lxml")

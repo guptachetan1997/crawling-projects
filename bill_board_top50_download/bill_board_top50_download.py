@@ -44,14 +44,14 @@ def download_video_youtube(url,tagline,song_name,artist_name):
 	soup = BeautifulSoup(html, "lxml")
 	ex = soup.find('a',attrs = {'class':"yt-ui-ellipsis-2"})
 	video_url = "https://www.youtube.com" + ex['href']
-	print tagline
+	print (tagline)
 	tt = artist_name + " - " + song_name + ".%(ext)s"
 	os.system("youtube-dl --extract-audio --audio-format mp3 -o " + "\"" + tt + "\"" + " " + video_url)
 	song = ID3(artist_name + " - " + song_name + ".mp3")
 	song['TITLE'] = song_name
 	song['ARTIST'] = artist_name
-	print
-	print
+	print()
+	print()
 
 def get_song_name():
 	url = "http://www.billboard.com/charts/hot-100"
@@ -78,7 +78,7 @@ def get_song_name():
 			break
 
 def main():
-	print
+	print()
 	get_song_name()
 
 if __name__ == '__main__':

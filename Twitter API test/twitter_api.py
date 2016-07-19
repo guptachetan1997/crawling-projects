@@ -19,7 +19,12 @@ api = twitter.Api(consumer_key=oauth_object[0],
                       access_token_secret=oauth_object[3])
 
 # print(api.VerifyCredentials())
-tweets = api.GetSearch(term="AAP", count=10, lang="en")
-for tweet in tweets:
-	print (tweet.text).encode('utf8')
+# tweets = api.GetSearch(term="AAP", count=10, lang="en")
+# for tweet in tweets:
+# 	print (tweet.text).encode('utf8')
+tweet = "@MyntraSupport When are you people planning to resolve #160705-004212 for the refund of the order #124698145 ? ["
+for i in range(1,11):
+    sent = tweet + str(i) + "/10]"
+    print (sent)
+#    api.PostUpdate(sent)
 

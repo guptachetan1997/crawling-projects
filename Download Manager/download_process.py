@@ -3,7 +3,7 @@ import time
 
 def download_video_youtube(url):
 	try:
-		print "Downloading " + url
+		print ("Downloading " + url)
 		if url.find("youtube") is not -1:
 			os.system("youtube-dl " + url)
 		else:
@@ -23,7 +23,7 @@ def main():
 				else:
 					i+=1
 	except KeyboardInterrupt:
-		print "Thing"
+		print ("Thing")
 		lines = open('list.txt').readlines()
 		open('newfile.txt', 'w').writelines(lines[i:])
 		os.remove('list.txt')

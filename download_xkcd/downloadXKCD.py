@@ -8,7 +8,7 @@ from threading import Thread
 
 def get_requests(url):
 	headers={'User-Agent':"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:41.0) Gecko/20100101 Firefox/41.0"}
-	print url
+	print (url)
 	r = requests.get(url,headers = headers)
 	r.raise_for_status()
 	html = r.text.encode("utf8")

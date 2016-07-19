@@ -58,7 +58,7 @@ def main():
 	url= "https://news.google.co.in/"
 	all_article_data = get_requests(url)
 	for thing in all_article_data:
-		print thing['title']
+		print (thing['title'])
 
 
 if __name__ == "__main__":

@@ -11,5 +11,5 @@ html = driver.page_source
 soup = BeautifulSoup(html.encode('utf8'), "lxml")
 ex = soup.find_all('img', attrs={'ng-if':"record.urlPictures"})
 for image in ex:
-	print "http://www.hotstar.com/tv/shockers/9153/" + slugify(image['alt'][12:]) + "/" + image['src'][49:59]
+	print ("http://www.hotstar.com/tv/shockers/9153/" + slugify(image['alt'][12:]) + "/" + image['src'][49:59])
 driver.quit()

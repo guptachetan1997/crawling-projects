@@ -48,7 +48,7 @@ def get_players(url,url1):
 
 	dom_players = get_players_DOM(url1)
 
-	print dom_players
+	print (dom_players)
 	for player in players:
 		name =  player.find('td', attrs={'class':"left"}).text
 		temp = player.findAll('td', attrs={'nowrap':"nowrap"})
@@ -57,7 +57,7 @@ def get_players(url,url1):
 		avg = temp [6].text
 		sr = temp[8].text
 		dataline = name + ";" + matches + ";" + runs + ";" + avg + ";" + sr
-		print dataline
+		print (dataline)
 		dataline += "\n"
 		file.write(dataline)
 		dom_player = check_DOM(dom_players, name)

@@ -30,10 +30,10 @@ def get_requested_id(url):
         for x in ex:
             if x.find('state')['mchstate'] == "inprogress":
                 flag = 1
-                print x['mchdesc'] + " :id: " + x['id']
+                print (x['mchdesc'] + " :id: " + x['id'])
         print
         if flag == 1:
-            requested_id = raw_input("Enter the id : ")
+            requested_id = input("Enter the id : ")
             return str(requested_id)
         else:
             return str("SORRY")
@@ -50,7 +50,7 @@ def get_requests(url, requested_id):
         ex = soup.findAll('match')
         for x in ex:
             if x.find('state')['mchstate'] == "inprogress" and x['id'] == requested_id:
-                print x['mchdesc']
+                print (x['mchdesc'])
                 team = x.find("bttm")['sname']
                 crr = ((x.find('mscr')).find('inngsdetail'))['crr']
                 rrr = ((x.find('mscr')).find('inngsdetail'))['rrr']
@@ -58,7 +58,7 @@ def get_requests(url, requested_id):
                     score = str(team) + ": " + x.find('inngs')['r'] + "/" + x.find('inngs')['wkts'] + " OVRS: " + x.find('inngs')['ovrs'] + " Cur.RR: " + crr + "\n" + x.find('state')['status']
                 else:
                     score = str(team) + ": " + x.find('inngs')['r'] + "/" + x.find('inngs')['wkts'] + " OVRS: " + x.find('inngs')['ovrs'] + " Req.RR: " + rrr + "\n" + x.find('state')['status']
-                print score
+                print (score)
                 tagline  = x['mchdesc'] + "\n" + score
                 sendmessage(x['mchdesc'], score)
     except:
@@ -72,7 +72,7 @@ def main():
             get_requests(url, requested_id)
             time.sleep(15)
     else:
-        print "No match is currently live."
+        print ("No match is currently live.")
 
 if __name__ == '__main__':
     main()

@@ -59,7 +59,7 @@ def get_requests(url):
 		file.write(str(timestamp) + ";" + total_price + "\n")
 		file.close()
 	except:
-		print "FUcked it"
+		print ("FUcked it")
 
 def main():
 	url = "http://www.amazon.in/WD-Passport-WDBGPU0010BBK-Portable-External/dp/B00Y0R9D6G?ie=UTF8"

@@ -26,7 +26,7 @@ def sendmessage(message):
 
 
 def download_episode(episode_url):
-    print episode_url
+    print (episode_url)
     os.system("wget -c \"" + episode_url + "\" >/dev/null 2>&1")
 
 
@@ -46,7 +46,7 @@ def get_requests(url):
         for x in ex:
             if (x.text != "[To Parent Directory]"):
                 season_url = base + x['href']
-                print "S0" + str(i)
+                print ("S0" + str(i))
                 if i > 0:
                     res = requests.get(season_url, headers=headers)
                     htm = res.text.encode("utf8")
@@ -71,7 +71,7 @@ def get_requests(url):
                     print
                 i+=1
     except:
-        print "hahahahhaha"
+        print ("hahahahhaha")
 
 
 def main():

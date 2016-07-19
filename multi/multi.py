@@ -34,7 +34,7 @@ def get_requests(url,sym):
 		html = r.text.encode("utf8")
 		soup = BeautifulSoup(html, "lxml")
 		ex = soup.find('span',{'class':"time_rtq_ticker"})
-		print sym + " " + ex.text
+		print (sym + " " + ex.text)
 		time_stamp = strftime("%H:%M:%S", gmtime())
 		files.write(str(str(time_stamp) + " " + ex.text + "\n"))
 	except:

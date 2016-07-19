@@ -64,7 +64,7 @@ def parse_xml(soup):
 				else:
 					file.write(person[ii][jj] + ";")
 			except:
-				print ii
+				print (ii)
 				file.write(" " + ";")
 		file.write("\n")
 	file.close()
