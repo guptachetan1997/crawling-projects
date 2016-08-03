@@ -13,7 +13,6 @@ with open(batch+'.txt', 'rb') as file:
 	df['Last Name'] = 4
 	lnames = [batch for x in range(1,length)]
 	df['Last Name'] = pd.Series(lnames)
-	fnames = [str(x) for x in range(1,length)]
 	nums = [line.decode('utf8') for line in lines]
 	df['Home Phone'] = 4
 	df['Home Phone'] = pd.Series(nums)

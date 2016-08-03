@@ -1,22 +1,25 @@
-import pandas as pd
+from selenium import webdriver
+from selenium.webdriver.common.keys import Keys
+
+contacts = []
+
+driver = webdriver.Chrome()
+driver.set_window_size(1120, 550)
+driver.get("https://web.whatsapp.com/")
 
 print('Enter batch name : ')
 batch = input()
 
-with open(batch+'.txt', 'rb') as file:
-	lines = file.read().splitlines()
-	length = len(lines) + 1
-	df = pd.DataFrame()
-	df['First Name'] = 4
-	fnames = ['Target'+str(x) for x in range(1,length)]
-	df['First Name'] = pd.Series(fnames)
-	df['Last Name'] = 4
-	lnames = [batch for x in range(1,length)]
-	df['Last Name'] = pd.Series(lnames)
-	fnames = [str(x) for x in range(1,length)]
-	nums = [line.decode('utf8') for line in lines]
-	df['Home Phone'] = 4
-	df['Home Phone'] = pd.Series(nums)
-	df['Display Name'] = df['First Name'] + df['Last Name']
-	print(df)
-	df.to_csv(batch + '.csv', index=False)
+driver.find_element_by_xpath("//*[@id=\"side\"]/header/div[2]/div/span/div[2]/button").click()
+
+driver.find_element_by_xpath("//*[@id=\"side\"]/header/div[2]/div/span/div[2]/span/div/ul/li[1]").click()
+
+driver.find_element_by_xpath("//*[@id=\"app\"]/div/div[3]/div[1]/span[1]/span/div/div/div[2]/div/div[2]/div[1]/div").send_keys('2K16 ' + batch, Keys.RETURN)
+
+for x in contacts:
+	user_name = 'test' + str(x) + ' ' + batch
+	driver.find_element_by_xpath("//*[@id=\"app\"]/div/div[3]/div[1]/span[1]/span/div/div/div[1]/div/div/input").send_keys(user_name, Keys.RETURN)
+
+driver.find_element_by_xpath("//*[@id=\"app\"]/div/div[3]/div[1]/span[1]/span/div/div/span/button").click()
+
+	
