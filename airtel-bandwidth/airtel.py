@@ -17,10 +17,10 @@ def get_requests(url):
 	soup = BeautifulSoup(html, "lxml")
 	ex =  soup.find('div', attrs={'class' : "box1"})
 	eex = ex.find('ul')
-	spans = eex.findAll('span')
-	bandwidth_left = spans[2].text
-	days_left = spans[3].text
-	dsl = spans[4].text
+	lis = eex.findAll('li')
+	bandwidth_left = lis[1].find('div', attrs={'class':"description"}).find('span').text
+	days_left = lis[2].find('div', attrs={'class':"description"}).find('span').text
+	dsl = lis[3].find('div', attrs={'class':"description"}).find('span').text
 	print ("Connection : " + dsl)
 	print ("Bandwidth left : " + bandwidth_left)
 	print ("Days Left : " + days_left)

@@ -2,7 +2,7 @@ import random
 import os
 import requests
 from bs4 import BeautifulSoup
-from ID3 import *
+#from ID3 import *
 
 user_agents = [  
     'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11',
@@ -47,10 +47,10 @@ def download_video_youtube(url,tagline,song_name,artist_name):
 	print (tagline)
 	tt = artist_name + " - " + song_name + ".%(ext)s"
 	os.system("youtube-dl --extract-audio --audio-format mp3 -o " + "\"" + tt + "\"" + " " + video_url)
-	song = ID3(artist_name + " - " + song_name + ".mp3")
-	song['TITLE'] = song_name
-	song['ARTIST'] = artist_name
-	print()
+	#song = ID3(artist_name + " - " + song_name + ".mp3")
+	#song['TITLE'] = song_name
+	#song['ARTIST'] = artist_name
+	#print()
 	print()
 
 def get_song_name():
