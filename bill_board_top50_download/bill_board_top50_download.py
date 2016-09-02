@@ -2,7 +2,6 @@ import random
 import os
 import requests
 from bs4 import BeautifulSoup
-#from ID3 import *
 
 user_agents = [  
     'Mozilla/5.0 (Windows; U; Windows NT 5.1; it; rv:1.8.1.11) Gecko/20071127 Firefox/2.0.0.11',
@@ -47,10 +46,6 @@ def download_video_youtube(url,tagline,song_name,artist_name):
 	print (tagline)
 	tt = artist_name + " - " + song_name + ".%(ext)s"
 	os.system("youtube-dl --extract-audio --audio-format mp3 -o " + "\"" + tt + "\"" + " " + video_url)
-	#song = ID3(artist_name + " - " + song_name + ".mp3")
-	#song['TITLE'] = song_name
-	#song['ARTIST'] = artist_name
-	#print()
 	print()
 
 def get_song_name():
@@ -60,22 +55,25 @@ def get_song_name():
 	x = soup.findAll('div',attrs={'class':"chart-row__primary"})
 	i = 1
 	for ex in x:
-		check_x = ex.find('span',attrs = {'class' : "chart-row__last-week"})
-		if(check_x.text == "Last Week: --"):
-			eex = ex.find('h2')
-			ffx = ex.find('a',attrs={'data-tracklabel':"Artist Name"})
-			song_name = eex.text
-			artist_name = ffx.text[4:]
-			search_query = song_name + artist_name
-			search_query = change_string(search_query)
-			tagline = str(i) + ". " + correct_string(song_name) + " : " + correct_string(artist_name)
-			try :
-				download_video_youtube(base_url + search_query,tagline, correct_string(song_name), correct_string(artist_name))
-			except:
-				pass
-		i = i+1
-		if(i > 100):
-			break
+		try:
+			check_x = ex.find('span',attrs = {'class' : "chart-row__last-week"})
+			if (check_x.text == "Last Week: --"):
+				eex = ex.find('h2')
+				ffx = ex.find('a',attrs={'data-tracklabel':"Artist Name"})
+				song_name = eex.text
+				artist_name = ffx.text[4:]
+				search_query = song_name + artist_name
+				search_query = change_string(search_query)
+				tagline = str(i) + ". " + correct_string(song_name) + " : " + correct_string(artist_name)
+				try :
+					download_video_youtube(base_url + search_query,tagline, correct_string(song_name), correct_string(artist_name))
+				except:
+					pass
+			i = i+1
+			if(i > 100):
+				break
+		except:
+			pass
 
 def main():
 	print()
