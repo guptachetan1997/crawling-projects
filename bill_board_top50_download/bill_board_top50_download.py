@@ -52,28 +52,26 @@ def get_song_name():
 	url = "http://www.billboard.com/charts/hot-100"
 	html = get_requests(url)
 	soup = BeautifulSoup(html, "lxml")
-	x = soup.findAll('div',attrs={'class':"chart-row__primary"})
-	i = 1
-	for ex in x:
+	articles = soup.findAll('article', attrs={'class':"chart-row"})
+	for article in articles:
 		try:
-			check_x = ex.find('span',attrs = {'class' : "chart-row__last-week"})
-			if (check_x.text == "Last Week: --"):
+			ex = article.find('div',attrs={'class':"chart-row__primary"})
+			check_x = article.find('div', attrs={'class':"chart-row__secondary"}).find('div', attrs={'class':"chart-row__weeks-on-chart"}).find('span', attrs={'class':"chart-row__value"})
+			if (check_x.text == "1"):
 				eex = ex.find('h2')
 				ffx = ex.find('a',attrs={'data-tracklabel':"Artist Name"})
 				song_name = eex.text
 				artist_name = ffx.text[4:]
 				search_query = song_name + artist_name
 				search_query = change_string(search_query)
+				i = ex.find('div', attrs={'class' : "chart-row__main-display"}).find('span', attrs={'class':"chart-row__current-week"}).text
 				tagline = str(i) + ". " + correct_string(song_name) + " : " + correct_string(artist_name)
 				try :
 					download_video_youtube(base_url + search_query,tagline, correct_string(song_name), correct_string(artist_name))
 				except:
 					pass
-			i = i+1
-			if(i > 100):
-				break
 		except:
-			pass
+			print("No I fucked")
 
 def main():
 	print()
