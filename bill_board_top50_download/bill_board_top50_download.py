@@ -59,7 +59,7 @@ def get_song_name():
 			check_x = article.find('div', attrs={'class':"chart-row__secondary"}).find('div', attrs={'class':"chart-row__weeks-on-chart"}).find('span', attrs={'class':"chart-row__value"})
 			if (check_x.text == "1"):
 				eex = ex.find('h2')
-				ffx = ex.find('a',attrs={'data-tracklabel':"Artist Name"})
+				ffx = ex.find('h3',attrs={'class':"chart-row__artist"})
 				song_name = eex.text
 				artist_name = ffx.text[4:]
 				search_query = song_name + artist_name
@@ -68,10 +68,10 @@ def get_song_name():
 				tagline = str(i) + ". " + correct_string(song_name) + " : " + correct_string(artist_name)
 				try :
 					download_video_youtube(base_url + search_query,tagline, correct_string(song_name), correct_string(artist_name))
-				except:
-					pass
-		except:
-			print("No I fucked")
+				except Exception as e:
+					print(e, 'occured while initiating download')
+		except Exception as e:
+			print(e, 'occured while main for loop')
 
 def main():
 	print()
