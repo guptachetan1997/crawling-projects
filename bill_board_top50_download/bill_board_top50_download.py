@@ -61,7 +61,7 @@ def get_song_name():
 				eex = ex.find('h2')
 				ffx = ex.find('a', attrs={'class' : "chart-row__artist"})
 				song_name = eex.text
-				artist_name = ffx.text[4:]
+				artist_name = ffx.text[1:]
 				search_query = song_name + artist_name
 				search_query = change_string(search_query)
 				i = ex.find('div', attrs={'class' : "chart-row__main-display"}).find('span', attrs={'class':"chart-row__current-week"}).text
